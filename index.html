@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Pokke</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	<meta name="description" content="Pokke Dashboard" />
 	<meta name="keywords" content="Pokke, Map App, Connection" />
 	<meta name="author" content="Gaofei Zhao" />
@@ -56,7 +56,7 @@
 	</head>
 	<body>
 	<header role="banner" id="fh5co-header">
-        <div class="fluid-container">
+        <div class="fluid-container hidden-xs">
 			<nav class="navbar navbar-default navbar-fixed-top js-fullheight">
 				<div id="navbar" class="navbar-collapse js-fullheight">
 					<ul class="nav navbar-nav navbar-left">
@@ -74,8 +74,8 @@
     <style type="text/css">  
         html, body {width:100%;height:100%;}
         .my-navbar {padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}  
-        .my-navbar a{background:transparent !important;color:#fff !important}  
-        .my-navbar a:hover {color:#FFD700 !important;background:transparent;outline:0}  
+        .my-navbar a{background:transparent !important;color:#FFD700 !important}  
+        .my-navbar a:hover {color:#FFD700 !important;background:transparent;outline:0;list-style-type:none; border-bottom:2px solid #FFD700}  
         .my-navbar a {transition: color 0.5s ease-in-out;}
         .top-nav {padding:0;}  
         button.navbar-toggle {background-color:#fbfbfb;}
@@ -111,7 +111,7 @@
                                 <br> 
                                 <br/>
                                 	<div style="display:inline-block;">
-                                        <input type="text" id="email_getter" placeholder="请输入您的邮箱获取内测版">
+                                        <input  style="color:black" type="text" id="email_getter" placeholder="请输入您的邮箱获取内测版">
                                         <div class="fa fa-arrow-circle-o-right" style="font-size:24px ;float:right; margin:5px 0 0 5px;"></div>
                                     </div>
                                 
@@ -123,7 +123,7 @@
 		</div>
 	</section>
 
-	<section id="fh5co-services" data-section="info1">
+	<section id="fh5co-services" data-section="info1" style = "background: #fff;">
 		<div class="fh5co-services">
 			<div class="container">
 				<div class="row">
@@ -140,8 +140,8 @@
 										<div class="core">
 											<div class="fh5co-post to-animate">
                                                 <ul>
-                                                  <li>看到附近校友动向，了解附近发生的最热话题</li>
-                                                  <li>收到提示当话题位置得到最大匹配</li>
+                                                  <li class="newli">看到附近校友动向，了解附近发生的最热话题</li>
+                                                  <li class="newli">收到提示当话题位置得到最大匹配</li>
                                                 </ul>
 											</div>
 										</div>
@@ -149,7 +149,7 @@
 								</div>
 							</div>
 						</div>
-                        <div class="grid2 to-animate">
+                        <div class="grid2 to-animate col-lg-10">
                             <img class = "img-responsive" src="images/iphone_1.png" style="float:right">
 						</div>
 					</div>
@@ -159,13 +159,13 @@
 		</div>
 	</section>
 
-	<section id="fh5co-explore" data-section="info2">
+	<section id="fh5co-explore" data-section="info2" style = "background: #FFF5D4;">
 		<div class="fh5co-services">
 			<div class="container">
 				<div class="row">
 					<div class="core-features">
-                        <div class="grid2 to-animate">
-                            <img class = "img-responsive" src="images/iphone_2.png" style="float:left">
+                        <div class="grid2 to-animate hidden-xs" >
+                            <img class = "img-responsive col-lg-10" src="images/iphone_2.png" style="float:left">
 						</div>
 						<div class="grid2" style="margin:auto auto">
 							<div class="core-f" style="height:600px；">
@@ -179,9 +179,9 @@
 										<div class="core">
 											<div class="fh5co-post to-animate">
                                                 <ul>
-                                                  <li>把状态、图片、视频直接戳到地图上任意你想要的地点</li>
-                                                  <li>气泡戳随时间消逝并随热度持续</li>
-                                                  <li>掌握地点过去发生、正在发生和即将发生的故事</li>
+                                                  <li class="newli">把状态、图片、视频直接戳到地图上任意你想要的地点</li>
+                                                  <li class="newli">气泡戳随时间消逝并随热度持续</li>
+                                                  <li class="newli">掌握地点过去发生、正在发生和即将发生的故事</li>
                                                 </ul>
 											</div>
 										</div>
@@ -189,13 +189,16 @@
 								</div>
 							</div>
 						</div>
+                        <div class="grid2 to-animate hidden-sm hidden-md hidden-lg hidden-print">
+                            <img class = "img-responsive col-lg-10" src="images/iphone_2.png" style="float:left">
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	<section id="fh5co-pricing" data-section="info3">
+	<section id="fh5co-pricing" data-section="info3" style = "background: #fff;">
 		<div class="fh5co-services">
 			<div class="container">
 				<div class="row">
@@ -212,8 +215,8 @@
 										<div class="core">
 											<div class="fh5co-post to-animate">
                                                 <ul>
-                                                  <li>在地图上发出求助并通过系统只能发送给大牛校友</li>
-                                                  <li>评论搜索教授、专业、职位、生活交易、法律等相关话题</li>
+                                                  <li class="newli">在地图上发出求助并通过系统智能发送给大牛校友</li>
+                                                  <li class="newli">评论搜索教授、专业、职位、生活交易、法律等相关话题</li>
                                                 </ul>
 											</div>
 										</div>
@@ -222,7 +225,7 @@
 							</div>
 						</div>
                         <div class="grid2 to-animate">
-                            <img class = "img-responsive" src="images/iphone_3.png" style="float:right">
+                            <img class = "img-responsive col-lg-10" src="images/iphone_3.png" style="float:right">
 						</div>
 					</div>
 				</div>
@@ -231,7 +234,7 @@
 		</div>
 	</section>	
 
-	<div id="fh5co-footer" role="contentinfo" data-section="contact" style="background">
+	<div id="fh5co-footer" role="contentinfo" data-section="contact" style = "background: #000;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 to-animate">
@@ -306,11 +309,13 @@
         })
     </script>  
     
+<!--
     <script type="text/javascript">
         $(window).load(function() {
             $('body').sectionMenu().fragmentScroll();
         });
     </script>
+-->
 
 	</body>
 </html>
