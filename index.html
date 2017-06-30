@@ -3,7 +3,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="" ng-controller="myCtrl"> <!--<![endif]-->
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="images/2.png">
 
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
 	
@@ -44,7 +44,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -56,7 +56,7 @@
 	</head>
 	<body>
 	<header role="banner" id="fh5co-header">
-        <div class="fluid-container hidden-xs">
+        <div class="fluid-container">
 			<nav class="navbar navbar-default navbar-fixed-top js-fullheight">
 				<div id="navbar" class="navbar-collapse js-fullheight">
 					<ul class="nav navbar-nav navbar-left">
@@ -82,10 +82,10 @@
         button.navbar-toggle > span.icon-bar {background-color:#dedede}  
     </style>
         
-        <nav class="navbar navbar-fixed-top my-navbar" role="navigation">    
-        <div class="container-fluid">   
+        <nav class="navbar navbar-fixed-top my-navbar nav-color hidden-xs" role="navigation" ng-if = "direction">    
+        <div class="container-fluid" >   
             <div class="collapse navbar-collapse" id="example-navbar-collapse">  
-                <ul class="nav navbar-nav" style="float:right">  
+                <ul class="nav navbar-nav customfont" style="float:right">  
                     <li><a href="#fh5co-home" data-nav-section="home">首页</a></li> 
                     <li><a href="#fh5co-services" data-nav-section="info1">产品介绍</a></li> 
                     <li><a href="#fh5co-footer" data-nav-section="contact">联系我们</a></li> 
@@ -145,7 +145,7 @@
 											</div>
 										</div>
 										<div class="core">
-											<div class="fh5co-post to-animate">
+											<div class="fh5co-post to-animate" style="margin-left:-15px;">
                                                 <ul>
                                                   <li class="newli">看到附近校友动向，了解附近发生的最热话题</li>
                                                   <li class="newli">收到提示当话题位置得到最大匹配</li>
@@ -184,7 +184,7 @@
 											</div>
 										</div>
 										<div class="core">
-											<div class="fh5co-post to-animate">
+											<div class="fh5co-post to-animate" style="margin-left:-15px;">
                                                 <ul>
                                                   <li class="newli">把状态、图片、视频直接戳到地图上任意你想要的地点</li>
                                                   <li class="newli">气泡戳随时间消逝并随热度持续</li>
@@ -220,7 +220,7 @@
 											</div>
 										</div>
 										<div class="core">
-											<div class="fh5co-post to-animate">
+											<div class="fh5co-post to-animate" style="margin-left:-15px;">
                                                 <ul>
                                                   <li class="newli">在地图上发出求助并通过系统智能发送给大牛校友</li>
                                                   <li class="newli">评论搜索教授、专业、职位、生活交易、法律等相关话题</li>
@@ -241,55 +241,61 @@
 		</div>
 	</section>	
 
-	<div id="fh5co-footer" role="contentinfo" data-section="contact" style = "background: #000;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 to-animate">
-					<h3 class="section-title">关于我们</h3>
-					<p>我们致力于提供出色的客户服务，如需查询产品，获取技术支持及咨询法律问题，此处提供Pokke戳客的在线联系方式。</p>
-					<p class="copy-right">&copy; 2017 Pokke. <br>All Rights Reserved. <br>
-					</p>
-				</div>
-                
+    <section id="fh5co-team" data-section="contact">
+        <div id="fh5co-footer" role="contentinfo" style = "background: #000;">
+                <div class="youtubewrapper">
+                    <div class="row video-container" id="video" style = "text-align:center; height:500px">
+                        <h1 class="bigger-title" >戳客戳戳戳</h1>
+                    </div>
+                </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 to-animate">
+                        <h3 class="section-title">关于我们</h3>
+                        <p>我们致力于提供出色的客户服务，如需查询产品，获取技术支持及咨询法律问题，此处提供Pokke戳客的在线联系方式。</p>
+                        <p class="copy-right">&copy; 2017 Pokke. <br>All Rights Reserved. <br>
+                        </p>
+                    </div>              
 
-				<div class="col-md-4 to-animate">
-					<h3 class="section-title">联系方式</h3>
-					<ul class="contact-info">
-						<li><i class="icon-map-marker"></i>38 Old Country Road, Room202, Garden City, New York NY 11530</li>
-						<li><i class="icon-phone"></i>+1 516-474-2328</li>
-						<li><i class="icon-envelope"></i><a href="#">ops@pokke.io</a></li>
-						<li><i class="icon-globe2"></i><a href="#">pokke.us</a></li>
-					</ul>
-					<ul class="social-media">
-						<li ><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
-						<li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
-						<li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
-						<li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
-					</ul>
-				</div>
-				<div class="col-md-4 to-animate">
-					<h3 class="section-title">联系我们</h3>
-					<form class="contact-form" action="assets/email/mail.php" method="post">
-						<div class="form-group">
-							<label for="name" class="sr-only">姓名</label>
-							<input type="name" class="form-control" name="name" placeholder="请输入您的姓名">
-						</div>
-						<div class="form-group">
-							<label for="email" class="sr-only">邮箱</label>
-							<input type="email" class="form-control" name="email" placeholder="请输入您的邮箱">
-						</div>
-						<div class="form-group">
-							<label for="message" class="sr-only">内容</label>
-							<textarea class="form-control" name="message" rows="7" placeholder="请输入您想要了解的内容"></textarea>
-						</div>
-						<div class="form-group">
-							<input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="发送信息">
-						</div>
-					</form>                    
-				</div>
-			</div>
-		</div>
-	</div>
+                    <div class="col-md-4 to-animate">
+                        <h3 class="section-title">联系方式</h3>
+                        <ul class="contact-info">
+                            <li><i class="icon-map-marker"></i>38 Old Country Road, Room202, Garden City, New York NY 11530</li>
+                            <li><i class="icon-phone"></i>+1 516-474-2328</li>
+                            <li><i class="icon-envelope"></i><a href="#">ops@pokke.us</a></li>
+                            <li><i class="icon-globe2"></i><a href="#">pokke.us</a></li>
+                        </ul>
+                        <ul class="social-media">
+                            <li ><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
+                            <li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 to-animate">
+                        <h3 class="section-title">联系我们</h3>
+                        <form class="contact-form" action="assets/email/mail.php" method="post">
+                            <div class="form-group">
+                                <label for="name" class="sr-only">姓名</label>
+                                <input type="name" class="form-control" name="name" placeholder="请输入您的姓名">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only">邮箱</label>
+                                <input type="email" class="form-control" name="email" placeholder="请输入您的邮箱">
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="sr-only">内容</label>
+                                <textarea class="form-control" name="message" rows="7" placeholder="请输入您想要了解的内容"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="发送信息">
+                            </div>
+                        </form>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 	
 	<!-- jQuery -->
@@ -306,8 +312,9 @@
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
-
-    <script src="js/jquery.scrollTo.js"></script>     
+    <script src="js/jquery.scrollTo.js"></script> 
+    <!--Angularjs-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
         
     <script>  
         $(window).scroll(function () {  
@@ -316,6 +323,35 @@
         })
     </script>  
     
+    <script>
+        function myCtrl($scope, $window) {
+           $scope.lastScrollTop = 0;
+           $scope.direction = true;
+           angular.element($window).bind("scroll", function() {
+                $scope.st = window.pageYOffset;
+                if ($scope.st > $scope.lastScrollTop + 15) {
+                    $scope.direction = false;
+                } else if ($scope.st < $scope.lastScrollTop - 15){
+                    $scope.direction = true;
+                }
+                $scope.lastScrollTop = $scope.st;
+                $scope.$apply();
+                console.log($scope.direction);
+           });
+        }
+    </script>
+    
+    <script>
+    function determineCountry(data){
+       if(data.address.country_code == "CN"){
+           document.getElementById("video").innerHTML += "<iframe height=315 width=560 src='http://player.youku.com/embed/XMjg0NTk2NjEzMg==' frameborder=0 'allowfullscreen'>" +  '</iframe>';
+       }
+       else{
+           document.getElementById("video").innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/UUS-14fjYFA" frameborder="0" allowfullscreen>' +  '</iframe>';           
+       }
+    }
+    </script>
+    <script type="text/javascript" src="http://api.wipmania.com/jsonp?callback=determineCountry"></script>
 <!--
     <script type="text/javascript">
         $(window).load(function() {
